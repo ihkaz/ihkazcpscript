@@ -2,6 +2,7 @@
 Credit Source Code :
 https://dsc.gg/pangerans
 https://t.me/ihkazscript
+https://github.com/ihkaz/Ihkazscript.git
 Real Discord Username : ihkaz
 {Please dont delete this / add credit if u take the code}
 
