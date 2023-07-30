@@ -1,6 +1,7 @@
 --[[
 Credit Source Code :
 https://dsc.gg/pangerans
+https://github.com/ihkaz/Ihkazscript.git
 https://t.me/ihkazscript
 Real Discord Username : ihkaz
 {Please dont delete this / add credit if u take the code}
