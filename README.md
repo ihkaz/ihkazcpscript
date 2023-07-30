@@ -1,5 +1,5 @@
 # Ihkazscript
-Hi Im iHkaz / gtpsinfo on tiktok 
+Hi Im iHkaz / @gtpsinfo on tiktok 
 
 i make this github for help u all if using growlauncher on growtopia/CreativePS
 
