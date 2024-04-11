@@ -17,7 +17,7 @@ local hasil
 local game
 
 function talkbubble(id, str)
-    sendVariant({[0] = "OnTalkBubble", [1] = id, [2] = str})
+    sendVariant({[0] = "OnTalkBubble", [1] = id, [2] = str},-1)
 end
 
 function qemefunc(number)
