@@ -17,7 +17,7 @@ local hasil
 local game
 
 function talkbubble(id, str)
-    SendVariant({v0 = "OnTalkBubble", v1 = id, v2 = str})
+    SendVariant({[0] = "OnTalkBubble", [1] = id, [2] = str})
 end
 
 function qemefunc(number)
@@ -50,7 +50,7 @@ function counts(number)
     end
 end
 
-AddHook(function(type, pkt)
+function textpacket(type, pkt)
     if pkt:find("/change") then
         if remecount and not qemecount then
             remecount = false
@@ -65,22 +65,26 @@ AddHook(function(type, pkt)
         end
     end
     return false
-end, "OnSendPacket")
+end
 
-AddHook(function(var)
-    if var.v1 == "OnConsoleMessage" then
-        LogToConsole("`7[`6ihkazscript``] " .. var.v2)
+AddHook("ontextpacket","Hooksd",textpacket)
+
+function varlist(var)
+    if var[0] == "OnConsoleMessage" then
+        logToConsole("`7[`6ihkazscript``] " .. var.v2)
         return true
     end
-    if var.v1 == "OnTalkBubble" then
-        if var.v3:find("spun the wheel") then
-            num = string.gsub(string.gsub(var.v3:match("and got (.+)"), "!%]", ""), "`", "")
+    if var.[0] == "OnTalkBubble" then
+        if var.[2]:find("spun the wheel") then
+            num = string.gsub(string.gsub(var.[2]:match("and got (.+)"), "!%]", ""), "`", "")
             onlynumber = string.sub(num, 2)
             clearspace = string.gsub(onlynumber, " ", "")
             counts(tonumber(clearspace))
-            talkbubble(var.v2, "[" .. game .. "]" .. var.v3 .. "[" .. hasil .. "``]")
+            talkbubble(var.[1], "[" .. game .. "]" .. var.[2] .. "[" .. hasil .. "``]")
             return true
         end
     end
     return false
-end, "OnVariant")
+end
+
+AddHook("onvarlist","Hakdjdj",varlist)
