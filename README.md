@@ -9,3 +9,5 @@ you can request script by joining my discord server :
 
 https://dsc.gg/pangerans
 *sorry i dont have money for buying 14x boost😌/u can help me by buying my premium script on my server
+
+![Join Brok](http://invidget.switchblade.xyz/EqzpMpkp3b)
